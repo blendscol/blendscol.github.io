@@ -82,7 +82,19 @@ nav a.cta{
   background:var(--primary);
   color:white;
   padding:8px 12px;
-  border-radius:8px;
+  border-radius:20px;
+}
+.hero .cta-row a.cta,
+.hero .cta-row a.cta:visited,
+.hero .cta-row a.cta:hover,
+.hero .cta-row a.cta:active {
+  background: none;               /* Sin fondo tipo botón */
+  color: #1c1563 !important;      /* Color consistente en todos los estados */
+  text-decoration: none !important; /* Sin subrayado nunca */
+  padding: 0;                     /* Elimina el padding si no quieres estilo de botón */
+  border-radius: 0;               /* Sin bordes redondeados */
+  font-weight: 600;               /* Opcional: mantiene fuerza visual */
+  font-size: 14px;                /* Opcional: consistente con nav */
 }
 
 .menu-btn{

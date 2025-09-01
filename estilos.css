@@ -231,3 +231,9 @@ footer{
   .item{flex:1 1 48%;max-width:100%}
   .hero h2{font-size:26px}
 }
+@media (min-width: 981px) {
+  .logo {
+    width: 132px;   /* nuevo tamaño para PC */
+    height: 132px;
+  }
+}

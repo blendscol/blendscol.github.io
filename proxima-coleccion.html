@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Próxima Colección — BlendsCol</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    /* Hero principal */
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(135deg, var(--primary) 0%, #000 100%);
+      color: #fff;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 20px;
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Botones y textos secundarios */
+    .buy-button {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .buy-button:hover {
+      background: #0202a0;
+      transform: translateY(-2px);
+    }
+    .buy-info {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 12px;
+      line-height: 1.4;
+    }
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero {
+        padding: 80px 20px;
+      }
+      .hero h1 {
+        font-size: 36px;
+      }
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <!-- Header -->
+    <header class="header">
+      <a class="brand" href="index.html">
+        <div class="logo">
+  <img src="https://github.com/blendscol/Imagen-coleccion-1-blends/blob/main/Gradient%20Icon%20Map%20Navigation%20App%20Logo%20(7).png?raw=true" alt="BlendsCol Logo">
+</div>
+
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <!-- <a href="historial.html">Drop Historial</a> -->
+        <a href="proxima-coleccion.html">Próxima Colección</a>
+        <a class="cta" href="index.html#catalogo">Tienda</a>
+      </nav>
+      <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Próxima Colección</h1>
+      <p>¡Prepárate para nuestra edición limitada de septiembre! Mantente atento para ser el primero en conocer nuestros lanzamientos.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
+        <div>
+          <strong>BlendsCol</strong>
+          <div style="color:var(--muted)">Ediciones limitadas — Cartagena, CO</div>
+        </div>
+        <div style="color:var(--muted)">
+          Contacto: <a href="+57 3122397812/blends.teamco@gmail.com">blends.teamco@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Menú responsive simplificado
+    const btn = document.querySelector('.menu-btn');
+    const nav = document.querySelector('nav.nav');
+
+    btn?.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if (nav) nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
+</body>
+</html>
